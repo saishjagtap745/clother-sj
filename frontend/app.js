@@ -1,4 +1,4 @@
-const API = const API = "https://your-backend.onrender.com";;
+const API =  "https://render.com/docs/web-services#port-binding";;
 
 let cart = [];
 let wishlist = [];
