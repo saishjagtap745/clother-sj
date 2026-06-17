@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Clother By SJ</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<div class="logo">
+CLOTHER BY SJ
+</div>
+
+<ul class="nav-links">
+<li>Home</li>
+<li>Men</li>
+<li>Women</li>
+<li>Collection</li>
+<li>About</li>
+</ul>
+
+<div class="nav-right">
+
+<input
+type="text"
+id="search"
+placeholder="Search Products">
+
+<button
+class="login-btn"
+onclick="showLogin()">
+Login
+</button>
+
+<span class="icon">
+❤️
+</span>
+
+<span
+class="icon"
+onclick="openCart()">
+
+🛒
+
+<span id="cartCount">
+0
+</span>
+
+</span>
+
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="overlay">
+
+<h1>
+ELEVATE<br>
+YOUR STYLE
+</h1>
+
+<p>
+Luxury Inspired Fashion For Modern Elegance
+</p>
+
+<button class="shop-btn">
+SHOP NOW
+</button>
+
+</div>
+
+</section>
+
+<!-- FEATURED -->
+
+<section class="featured">
+
+<h2>Featured Collection</h2>
+
+<p>
+Premium fashion crafted for confidence.
+</p>
+
+</section>
+
+<!-- PRODUCTS -->
+
+<section class="products">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
+
+<h3>Premium Oversized Tee</h3>
+
+<p>₹1499</p>
+
+<div class="actions">
+
+<button onclick="addToWishlist('Premium Oversized Tee')">
+❤️
+</button>
+
+<button onclick="addToCart('Premium Oversized Tee',1499)">
+Add To Cart
+</button>
+
+<button onclick="buyNow('Premium Oversized Tee',1499)">
+Buy Now
+</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723">
+
+<h3>Luxury Shirt</h3>
+
+<p>₹2499</p>
+
+<div class="actions">
+
+<button onclick="addToWishlist('Luxury Shirt')">
+❤️
+</button>
+
+<button onclick="addToCart('Luxury Shirt',2499)">
+Add To Cart
+</button>
+
+<button onclick="buyNow('Luxury Shirt',2499)">
+Buy Now
+</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c">
+
+<h3>Minimal Dress</h3>
+
+<p>₹2999</p>
+
+<div class="actions">
+
+<button onclick="addToWishlist('Minimal Dress')">
+❤️
+</button>
+
+<button onclick="addToCart('Minimal Dress',2999)">
+Add To Cart
+</button>
+
+<button onclick="buyNow('Minimal Dress',2999)">
+Buy Now
+</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1483985988355-763728e1935b">
+
+<h3>Classic Jacket</h3>
+
+<p>₹3999</p>
+
+<div class="actions">
+
+<button onclick="addToWishlist('Classic Jacket')">
+❤️
+</button>
+
+<button onclick="addToCart('Classic Jacket',3999)">
+Add To Cart
+</button>
+
+<button onclick="buyNow('Classic Jacket',3999)">
+Buy Now
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="about">
+
+<h2>About Clother By SJ</h2>
+
+<p>
+
+Clother By SJ is a premium fashion destination inspired by
+luxury aesthetics and timeless design.
+
+Our mission is to deliver confidence, elegance and quality
+through every collection.
+
+</p>
+
+</section>
+
+<!-- NEWSLETTER -->
+
+<section class="newsletter">
+
+<h2>Become A Member</h2>
+
+<p>
+
+Get exclusive drops, early access and premium offers.
+
+</p>
+
+<input
+type="email"
+placeholder="Enter Email">
+
+<button>
+Subscribe
+</button>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<h3>CLOTHER BY SJ</h3>
+
+<p>
+Luxury Inspired Fashion
+</p>
+
+<p>
+© 2026 All Rights Reserved
+</p>
+
+</footer>
+
+<!-- LOGIN MODAL -->
+
+<div
+id="loginModal"
+class="modal">
+
+<div class="modal-box">
+
+<span
+class="close"
+onclick="closeLogin()">
+×
+</span>
+
+<h2>Welcome Back</h2>
+
+<input
+id="username"
+type="text"
+placeholder="Username">
+
+<input
+id="password"
+type="password"
+placeholder="Password">
+
+<button onclick="login()">
+Login
+</button>
+
+<button onclick="signup()">
+Create Account
+</button>
+
+</div>
+
+</div>
+
+<!-- CART MODAL -->
+
+<div
+id="cartModal"
+class="modal">
+
+<div class="modal-box">
+
+<h2>Your Cart</h2>
+
+<div id="cartItems">
+
+</div>
+
+<h3 id="cartTotal">
+Total: ₹0
+</h3>
+
+<button onclick="checkoutCart()">
+Checkout
+</button>
+
+<button onclick="closeCart()">
+Close
+</button>
+
+</div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
