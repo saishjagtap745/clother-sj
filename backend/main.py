@@ -14,9 +14,13 @@ from models import Order
 app = FastAPI()
 
 # ---------------- CORS ----------------
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # change to Vercel URL later
+    allow_origins=[
+        "http://localhost:5500",
+        "https://your-project.vercel.app"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
